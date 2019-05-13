@@ -19,11 +19,22 @@ public class HadoopDemoApplicationTests {
 
     @Test
     public void deleteTest(){
-        String deletePath = "/test/testfile.txt";
+        String deletePath = "/hi";
         try {
             hadoopController.delete(deletePath,false);
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+    @Test
+    public void mkdir() throws Exception {
+        String hello = hadoopController.mkdir("haha");
+        System.out.println(hello);
+    }
+
+    @Test
+    public void uploadFile() throws Exception {
+        hadoopController.uploadFile("/home/fan/test.txt","/hi/test.txt",4096);
     }
 }
