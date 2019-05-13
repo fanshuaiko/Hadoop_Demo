@@ -5,6 +5,3 @@ spring:
 server:
   port: 8080
 
-hdfs:
-  url: hdfs://127.0.0.1:9000
-  user: fan
